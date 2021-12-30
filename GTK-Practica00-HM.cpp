@@ -1,5 +1,10 @@
 /*
-https://gnome.pages.gitlab.gnome.org/gtk/gtk3/
+    José Juan Ojeda Granados, 27-12-2021
+    Empecemos con GTK
+
+    https://docs.gtk.org/gtk3/index.html  Fudamental
+
+    https://gnome.pages.gitlab.gnome.org/gtk/gtk3/index.html
 
 Para que funcione la compilación desde terminal
 gcc GTK-Practica00-HM.cpp `pkg-config --cflags --libs gtk+-3.0` -o GTK-Practica00-HM

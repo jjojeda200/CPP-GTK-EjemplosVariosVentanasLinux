@@ -2,6 +2,8 @@
     José Juan Ojeda Granados, 27-12-2021
     Empecemos con GTK
 
+    https://docs.gtk.org/gtk3/index.html  Fudamental
+
     https://gnome.pages.gitlab.gnome.org/gtk/gtk3/index.html
 
 Compilar desde terminal con:
@@ -42,11 +44,11 @@ static void activate(GtkApplication *Practica, gpointer user_data)
 {
   // GtkWidget declara el tipo de objetos widgets
   GtkWidget *ventana0 = gtk_application_window_new(Practica);     // Declara Widget y crear la ventana principal
-  GtkWidget *caja00;
-  GtkWidget *caja01;
-  GtkWidget *texto00;
-  GtkWidget *boton00;
-  GtkWidget *boton01;
+  GtkWidget *caja00 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
+  GtkWidget *caja01 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
+  GtkWidget *texto00 = gtk_label_new("José Juan Ojeda Granados, 27-12-2021\nEmpecemos con GTK\n");
+  GtkWidget *boton00 = gtk_button_new_with_mnemonic("Salir");
+  GtkWidget *boton01 = gtk_button_new_with_label("Aux");
   GtkWidget *window1;
   GtkWidget *caja10;
   GtkWidget *caja11;
@@ -73,13 +75,6 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   gtk_window_set_resizable(GTK_WINDOW(ventana0), FALSE);       // Redimencionar tamaño True/False
   gtk_container_set_border_width(GTK_CONTAINER(ventana0), 10); // Establece el ancho del borde de la ventana
 
-  caja00 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 100);
-  caja01 = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-  
-  texto00 = gtk_label_new("José Juan Ojeda Granados, 27-12-2021\nEmpecemos con GTK\n");
-  boton00 = gtk_button_new_with_mnemonic("Salir");
-  boton01 = gtk_button_new_with_mnemonic("Aux");
-
   gtk_widget_set_tooltip_text(boton00, "Boton Salir");
   gtk_widget_set_margin_bottom(boton00, 60);
   gtk_widget_set_margin_top(boton00, 60);
@@ -89,8 +84,8 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   gtk_container_add(GTK_CONTAINER(ventana0), caja00);
   gtk_box_pack_start(GTK_BOX (caja00), caja01, TRUE, FALSE, 0);
   gtk_box_pack_start(GTK_BOX (caja01), texto00, TRUE, FALSE, 0);
-  gtk_box_pack_start(GTK_BOX (caja00), boton00, TRUE, FALSE, 0);
-  gtk_box_pack_start(GTK_BOX (caja00), boton01, TRUE, FALSE, 0);
+  gtk_box_pack_start(GTK_BOX (caja00), boton00, FALSE, FALSE, 0);
+  gtk_box_pack_start(GTK_BOX (caja00), boton01, FALSE, FALSE, 0);
 
   /*
   Esto hará que la ventana sea destruida al llamar a gtk_widget_destroy (ventana) cuando "haga clic". Una vez más, la señal de destrucción podría provenir de aquí o del administrador de ventanas.
@@ -105,7 +100,7 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   /*
   La función gtk_window_set_icon () se usa para configurar el icono de la ventana, y la función create_pixbuf es personalizada por nosotros, con el propósito de obtener el pixbuf de una imagen.
   */
-  gtk_window_set_icon(GTK_WINDOW(ventana0), create_pixbuf("./imagenes/aguja-brujula.png"));
+  gtk_window_set_icon(GTK_WINDOW(ventana0), create_pixbuf("./imagenes/AgujaBrujula.png"));
 
   /*
   Aquí se genera un componente de ventana: GtkWindow, GTK_WINDOW_TOPLEVEL contiene la barra de título y el borde de la ventana, y se acuerda usar el administrador de ventanas para administrarlo
@@ -125,8 +120,8 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   boton10 = gtk_button_new_with_mnemonic("Oculta");
   boton11 = gtk_button_new_with_mnemonic("Muestra");
   gtk_container_add(GTK_CONTAINER(window1), caja10);
-  gtk_box_pack_start(GTK_BOX (caja10), caja11, TRUE, FALSE, 50);
-  gtk_box_pack_start(GTK_BOX (caja10), caja12, TRUE, TRUE, 50);
+  gtk_box_pack_start(GTK_BOX (caja10), caja11, FALSE, FALSE, 50);
+  gtk_box_pack_start(GTK_BOX (caja10), caja12, TRUE, FALSE, 50);
   gtk_box_pack_start(GTK_BOX (caja11), boton10, TRUE, FALSE, 0);
   gtk_box_pack_start(GTK_BOX (caja11), boton11, TRUE, FALSE, 0);
   gtk_box_pack_start(GTK_BOX (caja12), texto10, TRUE, FALSE, 0);
