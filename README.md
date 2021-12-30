@@ -9,3 +9,7 @@ GTK-Practica00-HM.cpp: como es de esperar "Hola Mundo"
 27-12-2021
 
 GTK-Practica01.cpp: Contenedores, hilos, acciones
+
+29-12-2021
+
+GTK-Practica02.cpp: Repitiendo contenedores, hilos, acciones

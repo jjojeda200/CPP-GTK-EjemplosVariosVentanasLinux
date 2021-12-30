@@ -1,3 +1,14 @@
+/*
+    José Juan Ojeda Granados, 27-12-2021
+    Empecemos con GTK
+
+    https://docs.gtk.org/gtk3/index.html  Fudamental
+
+    https://gnome.pages.gitlab.gnome.org/gtk/gtk3/index.html
+
+Compilar desde terminal con:
+gcc GTK-Practica02.cpp `pkg-config --cflags --libs gtk+-3.0` -o GTK-Practica02
+*/
 #include <gtk/gtk.h>
 
 void on_boton10(GtkWidget *widget, gpointer dato);

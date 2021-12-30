@@ -7,7 +7,7 @@
     https://gnome.pages.gitlab.gnome.org/gtk/gtk3/index.html
 
 Compilar desde terminal con:
-gcc windows.cpp `pkg-config --cflags --libs gtk+-3.0` -o windows
+gccGTK-Practica01.cpp `pkg-config --cflags --libs gtk+-3.0` -o GTK-Practica01
 */
 #include <gtk/gtk.h>
 
