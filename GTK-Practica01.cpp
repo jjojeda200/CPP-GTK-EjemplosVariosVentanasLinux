@@ -59,6 +59,7 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   GtkWidget *texto11;
   GtkWidget *texto12;
   GtkWidget *window2;
+  GtkWidget *EnTexto = gtk_entry_new();
 
   
   gtk_window_set_title(GTK_WINDOW(ventana0), "Aplicación Windows"); // Establecer título de ventana
@@ -84,6 +85,7 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   gtk_container_add(GTK_CONTAINER(ventana0), caja00);
   gtk_box_pack_start(GTK_BOX (caja00), caja01, TRUE, FALSE, 0);
   gtk_box_pack_start(GTK_BOX (caja01), texto00, TRUE, FALSE, 0);
+  gtk_box_pack_start(GTK_BOX (caja00), EnTexto, false, false, 0);
   gtk_box_pack_start(GTK_BOX (caja00), boton00, FALSE, FALSE, 0);
   gtk_box_pack_start(GTK_BOX (caja00), boton01, FALSE, FALSE, 0);
 
