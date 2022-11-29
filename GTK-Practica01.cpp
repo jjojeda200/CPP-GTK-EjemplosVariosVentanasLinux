@@ -7,7 +7,7 @@
     https://gnome.pages.gitlab.gnome.org/gtk/gtk3/index.html
 
 Compilar desde terminal con:
-gccGTK-Practica01.cpp `pkg-config --cflags --libs gtk+-3.0` -o GTK-Practica01
+gcc GTK-Practica01.cpp `pkg-config --cflags --libs gtk+-3.0` -o GTK-Practica01
 */
 #include <gtk/gtk.h>
 
@@ -46,7 +46,7 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   GtkWidget *ventana0 = gtk_application_window_new(Practica);     // Declara Widget y crear la ventana principal
   GtkWidget *caja00 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
   GtkWidget *caja01 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
-  GtkWidget *texto00 = gtk_label_new("José Juan Ojeda Granados, 27-12-2021\nEmpecemos con GTK\n");
+  GtkWidget *texto00 = gtk_label_new("José Juan Ojeda Granados, 20-09-2022\nEmpecemos con GTK\n");
   GtkWidget *boton00 = gtk_button_new_with_mnemonic("Salir");
   GtkWidget *boton01 = gtk_button_new_with_label("Aux");
   GtkWidget *window1;
@@ -61,7 +61,7 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   GtkWidget *window2;
   GtkWidget *EnTexto = gtk_entry_new();
 
-  
+
   gtk_window_set_title(GTK_WINDOW(ventana0), "Aplicación Windows"); // Establecer título de ventana
   /*
   La posición de la ventana de configuración en la pantalla está centrada.
@@ -93,7 +93,7 @@ static void activate(GtkApplication *Practica, gpointer user_data)
   Esto hará que la ventana sea destruida al llamar a gtk_widget_destroy (ventana) cuando "haga clic". Una vez más, la señal de destrucción podría provenir de aquí o del administrador de ventanas.
   */
   g_signal_connect_swapped(G_OBJECT(boton00), "clicked", G_CALLBACK(gtk_widget_destroy), G_OBJECT(ventana0));
-  
+
   // g_signal_connect(G_OBJECT(boton01), "clicked", G_CALLBACK(hello), NULL);
   // Anular las dos siguientes para que la anterior funcione
   g_signal_connect_swapped(G_OBJECT(boton01), "pressed", G_CALLBACK(gtk_widget_hide), G_OBJECT(texto00));
