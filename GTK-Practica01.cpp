@@ -42,7 +42,6 @@ void hello(GtkWidget *widget, gpointer texto00)
 
 static void activate(GtkApplication *Practica, gpointer user_data)
 {
-<<<<<<< HEAD
       // GtkWidget declara el tipo de objetos widgets
       GtkWidget *ventana0 = gtk_application_window_new(Practica); // Declara Widget y crear la ventana principal
       GtkWidget *caja00 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 10);
